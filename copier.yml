@@ -1,0 +1,7 @@
+_answers_file: ".copier-answers.common-config.yml"
+_subdirectory: "generate_root"
+
+owner:
+  type: str
+  help: "Enter the owner name"
+  default: "daaa1k"
