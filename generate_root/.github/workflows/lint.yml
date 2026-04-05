@@ -1,0 +1,24 @@
+name: Common Lint
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - uses: daaa1k/common-lint@36aff918b71de7babeae1d94e0f59824a8b42410 # v1.0.0
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
