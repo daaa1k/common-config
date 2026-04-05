@@ -1,3 +1,3 @@
 {
-  "extends": ["github>daaa1k/renovate-config"]
+  "extend": ["github>daaa1k/renovate-config"]
 }
